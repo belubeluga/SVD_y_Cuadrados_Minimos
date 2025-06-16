@@ -1,57 +1,53 @@
-# TP03 - Métodos Numéricos y Optimización (MNyO) - Primer Semestre 2024
+# TP03 - Numerical Methods and Optimization (NM&O) - First Semester 2024
 
-Este trabajo práctico se centra en el análisis y aplicación de la **descomposición en valores singulares (SVD)** y su uso en tareas de compresión de datos, reducción de la dimensionalidad y regresión lineal.
+This practical assignment focuses on the analysis and application of **Singular Value Decomposition (SVD)** and its use in data compression, dimensionality reduction, and linear regression tasks.
 
-📄 [Descargar informe TP03 en PDF](MNyO_TP03.pdf.zip)
-
----
-
-## 🖼️ PUNTO 1: Compresión de Imágenes
-
-Se implementa una técnica de compresión basada en **SVD** sobre un conjunto de imágenes representadas como vectores de dimensión \(p \times p\).
-
-### Objetivos:
-
-- Aplicar **SVD** para aprender una representación de baja dimensión.
-- Visualizar las imágenes reconstruidas con distintas cantidades de componentes principales.
-- Analizar el error de compresión (norma de Frobenius) en función de la dimensión \(d\).
-- Determinar el valor de \(d\) que garantiza un error menor al 10%.
+📄 [Download TP03 Report in PDF](MNyO_TP03.pdf.zip)
 
 ---
 
-## 📉 PUNTO 2: Reducción de Dimensionalidad y Cuadrados Mínimos
+## 🖼️ PART 1: Image Compression
 
-Se trabaja con un dataset de muestras de sensores (archivo `dataset.csv`) y una variable respuesta (`y.txt`) para realizar reducción de dimensionalidad y predicción lineal.
+A compression technique based on **SVD** is implemented on a set of images represented as vectors of size \(p \times p\).
 
-### Subpuntos:
+### Objectives:
 
-#### 🔻 2.1 Reducción de dimensionalidad
-
-- Se aplica **SVD** para reducir el dataset original \(X\) a un nuevo espacio \(Z = V_d^\top X\).
-- Se analizan las similitudes par-a-par entre muestras en espacios de distintas dimensiones (d = 2, 6, 10, p) usando **PCA**.
-- Se visualizan las matrices de similaridad y se discute la elección óptima de \(d\) según la estructura de los valores singulares.
-
-#### 📐 2.2 Regresión por Cuadrados Mínimos
-
-- Se entrena un modelo de regresión \( \hat{y} = X \hat{\beta} \) resolviendo el problema de mínimos cuadrados en el espacio original.
-- Se analizan los pesos asignados a cada dimensión original en el vector \( \hat{\beta} \).
-
-#### 🔁 2.3 Regresión sobre espacio reducido
-
-- Se entrena un modelo en el espacio reducido \(Z\) con \(d=2\).
-- Se compara el error de predicción con el modelo original y se identifican las muestras mejor ajustadas.
+- Apply **SVD** to learn a low-dimensional representation  
+- Visualize reconstructed images using different numbers of principal components  
+- Analyze compression error (Frobenius norm) as a function of the dimension \(d\)  
+- Determine the value of \(d\) that ensures an error below 10%
 
 ---
 
-## ✅ Requisitos
+## 📉 PART 2: Dimensionality Reduction and Least Squares
 
-- Python 3.x
-- numpy
-- matplotlib
-- pandas
-- scikit-learn
+This part uses a dataset of sensor measurements (`dataset.csv`) and a response variable (`y.txt`) to perform dimensionality reduction and linear prediction.
+
+### Subsections:
+
+#### 🔻 2.1 Dimensionality Reduction
+
+- **SVD** is applied to reduce the original dataset \(X\) to a new space \(Z = V_d^\top X\)  
+- Pairwise similarities between samples are analyzed in spaces of different dimensions (d = 2, 6, 10, p) using **PCA**  
+- Similarity matrices are visualized and the optimal value of \(d\) is discussed based on the structure of the singular values
+
+#### 📐 2.2 Least Squares Regression
+
+- A regression model \( \hat{y} = X \hat{\beta} \) is trained by solving the least squares problem in the original space  
+- The weights assigned to each original dimension in the vector \( \hat{\beta} \) are analyzed
+
+#### 🔁 2.3 Regression in Reduced Space
+
+- A model is trained in the reduced space \(Z\) with \(d = 2\)  
+- Prediction error is compared with the original model, and the best-fit samples are identified
+
+---
+
+## ✅ Requirements
+
+- Python 3.x  
+- numpy  
+- matplotlib  
+- pandas  
+- scikit-learn  
 - Jupyter Notebook
-
----
-
-
